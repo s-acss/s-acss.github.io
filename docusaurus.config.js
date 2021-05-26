@@ -2,12 +2,12 @@
 module.exports = {
   title: 'SACSS',
   tagline: 'Dinosaurs are cool',
-  url: 'https://ziven27.github.io',
-  baseUrl: '/sacss/',
+  url: 'https://s-acss.github.io/',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'ziven27', // Usually your GitHub org/user name.
+  organizationName: 's-acss', // Usually your GitHub org/user name.
   projectName: 'sacss', // Usually your repo name.
   i18n: {
     defaultLocale: 'zh-cn',
@@ -51,7 +51,7 @@ module.exports = {
           position: 'right',
         },
         {
-          href: 'https://github.com/ziven27/sacss',
+          href: 'https://github.com/s-acss/sacss',
           label: 'GitHub',
           position: 'right',
         },
