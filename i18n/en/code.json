@@ -1,11 +1,11 @@
 {
-  "首页": {
-    "message": "Home",
-    "description": "页面顶部标题"
-  },
-  "描述": {
-    "message": "描述",
+  "Create Utility First CSS library for your project faster and easier.": {
+    "message": "Create Utility First CSS library for your project faster and easier.",
     "description": "在 meta 标签中的描述"
+  },
+  "start.button": {
+    "message": "Get Start",
+    "description": "开始"
   },
   "原生": {
     "message": "Vanilla",
@@ -56,15 +56,12 @@
     "description": "feature"
   },
   "slogan": {
-    "message": "An utility-first CSS library for rapid UI development",
+    "message": "Create Utility First CSS library for your project faster and easier.",
     "description": "slogan"
   },
   "slogan.sub": {
-    "message": "The {strong} of natural spelling is what makes it different!",
+    "message": "Suit is Best！",
     "description": "slogan subtitle"
-  },
-  "命名规则": {
-    "message": "naming convention"
   },
   "theme.NotFound.title": {
     "message": "Page Not Found",
@@ -118,6 +115,10 @@
     "message": "Older Post",
     "description": "The blog post button label to navigate to the older/next post"
   },
+  "theme.tags.tagsPageTitle": {
+    "message": "Tags",
+    "description": "The title of the tag list page"
+  },
   "theme.blog.post.plurals": {
     "message": "One post|{count} posts",
     "description": "Pluralized label for \"{count} posts\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
@@ -129,10 +130,6 @@
   "theme.tags.tagsPageLink": {
     "message": "View All Tags",
     "description": "The label of the link targeting the tag list page"
-  },
-  "theme.tags.tagsPageTitle": {
-    "message": "Tags",
-    "description": "The title of the tag list page"
   },
   "theme.CodeBlock.copyButtonAriaLabel": {
     "message": "Copy code to clipboard",
@@ -166,22 +163,6 @@
     "message": "Next",
     "description": "The label used to navigate to the next doc"
   },
-  "theme.docs.sidebar.collapseButtonTitle": {
-    "message": "Collapse sidebar",
-    "description": "The title attribute for collapse button of doc sidebar"
-  },
-  "theme.docs.sidebar.collapseButtonAriaLabel": {
-    "message": "Collapse sidebar",
-    "description": "The title attribute for collapse button of doc sidebar"
-  },
-  "theme.docs.sidebar.responsiveCloseButtonLabel": {
-    "message": "Close menu",
-    "description": "The ARIA label for close button of mobile doc sidebar"
-  },
-  "theme.docs.sidebar.responsiveOpenButtonLabel": {
-    "message": "Open menu",
-    "description": "The ARIA label for open button of mobile doc sidebar"
-  },
   "theme.docs.versions.unreleasedVersionLabel": {
     "message": "This is unreleased documentation for {siteTitle} {versionLabel} version.",
     "description": "The label used to tell the user that he's browsing an unreleased doc version"
@@ -197,6 +178,22 @@
   "theme.docs.versions.latestVersionLinkLabel": {
     "message": "latest version",
     "description": "The label used for the latest version suggestion link label"
+  },
+  "theme.docs.sidebar.collapseButtonTitle": {
+    "message": "Collapse sidebar",
+    "description": "The title attribute for collapse button of doc sidebar"
+  },
+  "theme.docs.sidebar.collapseButtonAriaLabel": {
+    "message": "Collapse sidebar",
+    "description": "The title attribute for collapse button of doc sidebar"
+  },
+  "theme.docs.sidebar.responsiveCloseButtonLabel": {
+    "message": "Close menu",
+    "description": "The ARIA label for close button of mobile doc sidebar"
+  },
+  "theme.docs.sidebar.responsiveOpenButtonLabel": {
+    "message": "Open menu",
+    "description": "The ARIA label for open button of mobile doc sidebar"
   },
   "theme.common.editThisPage": {
     "message": "Edit this page",
@@ -221,9 +218,5 @@
   "theme.common.skipToMainContent": {
     "message": "Skip to main content",
     "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
-  },
-  "start.button": {
-    "message": "Get Start",
-    "description": "了解更多"
   }
 }

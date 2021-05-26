@@ -2,7 +2,7 @@
 
 **Theoretically** the global introduction of the file `sacss/index.css`, in which all class names will become global CSS keywords, can easily cause CSS **naming pollution**.
 
-Here we provide the LESS and SASS `WidthPrefix` Mixin to add a unified prefix to the entire core code as a **namespace** to reduce the scope of **pollution**.
+Here we provide the LESS and SASS `WidthPrefix` Mixin to add a uniform prefix to the entire core code as a **namespace** to reduce the scope of **pollution**.
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -11,24 +11,19 @@ import TabItem from '@theme/TabItem';
   defaultValue="less"
   values={[
     { label: 'LESS', value: 'less', },
-    { label: 'SASS', value: 'sass', }
+    { label: 'SASS', value: 'sass', },
+    { label: 'OUTPUT CSS', value: 'out', }
   ]
-}
+  }
 >
 <TabItem value="less">
 
 ```less
 @import 'sacss/less/WidthPrefix';
 
-@prefix: '_';  // Replace this with the prefix you want to add
+@prefix: '_'; // This is replaced with the prefix you want to add
 
 #WidthPrefix(@prefix);
-
-/** The build will output the following code */
-// ._db{display:block}
-// ._df{display:flex}
-// ._fw400{font-weight:400}
-// ...
 ```
 
 </TabItem>
@@ -37,26 +32,30 @@ import TabItem from '@theme/TabItem';
 ```scss
 @import 'sacss/sass/WidthPrefix';
 
-$prefix: '_'; // Replace this with the prefix you want to add
+$prefix: '_'; // This is replaced with the prefix you want to add
 
 @include WidthPrefix($prefix);
+```
+</TabItem>
+<TabItem value="out">
 
-/** The build will output the following code */
-// ._db{display:block}
-// ._df{display:flex}
-// ._fw400{font-weight:400}
-// ...
+```css
+/* will add a '_' prefix to each CSS in sacss/index.css */
+. _db{display:block}
+. _df{display:flex}
+. _fw400{font-weight:400}
+/* The rest of the code is ignored here... */
 ```
 </TabItem>
 </Tabs>
 
-> CSS does not have Mixin function, please download the CSS file to add it manually.
-
 This way all our core classes will be prefixed with `_`.
+
+> CSS does not have Mixin functionality, please download the CSS file to add it manually.
 
 ## Not recommended
 
-Although we provide the ability to add **prefixes** to the core code.
+Although we provide the ability to add **prefixes** to our core code.
 
 However, in practice, we don't really recommend doing this.
 

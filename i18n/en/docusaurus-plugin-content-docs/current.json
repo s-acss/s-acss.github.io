@@ -10,5 +10,9 @@
   "sidebar.sideBar.category.Use": {
     "message": "Use",
     "description": "The label for category Use in sidebar sideBar"
+  },
+  "sidebar.sideBar.category.Guides": {
+    "message": "Guides",
+    "description": "The label for category Guides in sidebar sideBar"
   }
 }

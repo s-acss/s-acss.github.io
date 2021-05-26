@@ -1,36 +1,36 @@
-# 定制 Token
+# Custom Token
 
 ```bash
 sacss/
-├── less/                  # 存放 LESS Mixin 的文件夹
-│   ├── SACSS.less         # 帮助创建 sacss 的辅助 LESS Mixin
-│   ├── WidthPrefix.less   # 为核心代码添加自定义前缀
-│   └── Helpers.less       # 独立于 sacss 之外的常用辅助 Mixin
-├── sass/                  # 存放 LESS Mixin 的文件夹
-│   ├── SACSS.scss         # 帮助创建 sacss 的辅助 SASS Mixin
-│   ├── WidthPrefix.scss   # 为核心代码添加自定义前缀
-│   └── Helpers.scss       # 独立于 sacss 之外的常用辅助 mixin
-└── index.css              # 所有项目基本相同的核心代码（只推荐定制，命名前缀）;
+├── less/ # The folder where the LESS Mixin is stored
+│ ├── SACSS.less # Helps create a secondary LESS Mixin for sacss
+│ ├── WidthPrefix.less # Add custom prefixes to the core code
+│ └── Helpers.less # Common helper mixin independent of sacss
+├── sass/ # Folder where LESS Mixin is stored
+│ ├── SACSS.scss # Helper SASS Mixin to help create sacss
+│ ├── WidthPrefix.scss # Add custom prefixes to the core code
+│ └── Helpers.scss # Common helper mixin independent of sacss
+└── index.css # Core code that is basically the same for all projects (only customization is recommended, named prefixes);
 ```
 
-`less` 和 `sass` 拥有完全相同的文件和 API，只是**语法**不一样的实现而已。
+`less` and `sass` have the exact same documentation and API, just **syntax** different implementations.
 
-核心代码 `sacss/index.css` 里面存放的基本都是**布局**相关的代码。仅有纯黑和纯白两个颜色，甚至连常用的 `font-size` 相关的代码都不包含。
+The core code `sacss/index.css` basically holds **layout** related code. There are only two colors, pure black and pure white, and even the common `font-size` related code is not included.
 
-原因在于不同的设计师对于不同的项目，拥有着不同的**设计规范**，我们建议结合项目进行**定制**。
+The reason for this is that different designers have different **design specifications** for different projects, and we recommend combining them with the project for **customization**.
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 ## SACSS API
 
-|名称|解释|示例|
+|name|explanation|example|
 |----|----|----|
-|前缀|class name 前缀| `'_'` |
-|属性名|完整的 Style 属性|`'font-size'`|
-|属性缩写|基于命名规则的属性缩写|`'fs'`|
-|值列表|需要连续输出的值列表|`8,16,24`|
-|单位|所有的值会和单位进行乘法运算（为空表示不需要单位）|`1px`|
+|prefix|class name prefix| `'_'` |
+|attribute name|full Style attribute|`'font-size'`|
+|property abbreviations|naming rule-based property abbreviations|`'fs'`|
+|List of values|List of values to be output consecutively|`8,16,24`|
+|units|All values will be multiplied with units (null means no units are needed)|`1px`|
 
 <Tabs
   defaultValue="lessApi"
@@ -45,10 +45,10 @@ import TabItem from '@theme/TabItem';
 ```less
 @import 'sacss/less/SACSS';
 
-@prefix: '';  // class name 前缀
-@unit: 1px;   // 单位换算表达式
+@prefix: ''; // class name prefix
+@unit: 1px; // unit conversion expression
 
-#SACSS('属性名'; '@{prefix}属性缩写'; '值列表'; @unit);
+#SACSS('attribute name'; '@{prefix} attribute abbreviation'; 'list of values'; @unit);
 ```
 
 </TabItem>
@@ -57,16 +57,16 @@ import TabItem from '@theme/TabItem';
 ```css
 @import 'sacss/sass/SACSS';
 
-$prefix: '';  // class name 前缀
-$unit: 1px;   // 单位换算表达式
+$prefix: ''; // class name prefix
+$unit: 1px; // unit conversion expression
 
-@include SACSS('属性名', '#{$prefix}属性缩写', (值列表), $unit);
+@include SACSS('attribute name', '#{$prefix} attribute abbreviation', (list of values), $unit);
 ```
 
 </TabItem>
 </Tabs>
 
-对于缩写的命名规则，请[点击这里](./guides.name)。
+For naming rules for abbreviations, please [click here](. /guides.name).
 
 <Tabs
   defaultValue="lessApi"
@@ -133,11 +133,11 @@ $unit_rem: 1/16*1rem;
 </TabItem>
 </Tabs>
 
-这个与 `SACSS` 的同名方法，只是为了更加**简单**和**直观**的创建 `output` 中的 CSS 代码。
+This is the same method as `SACSS`, just to make it **simpler** and **intuitive** to create the CSS code in `output`.
 
-如果你觉得手写这部分 CSS 毫无压力，也完全可以自己手写。
+If you feel comfortable writing this part of the CSS by hand, you can also write it yourself.
 
-## 单位换算
+## Unit Conversions
 
 <Tabs
   defaultValue="a"
@@ -202,16 +202,16 @@ $unit_rem: 1/16*1rem;
 </TabItem>
 </Tabs>
 
-如果需要单位基于 rem 的换算，可填写 `1/16*1rem` 。
+If a rem-based conversion of units is required, fill in `1/16*1rem`.
 
-SACSS 方法只适用于**数字类型**的值使用。
+The SACSS method is only available for use with values of **numeric type**.
 
-比如 `font-weight:bold;` 不能使用 SACSS 创建，而 `font-weight:400;` 可以。
+For example, `font-weight:bold;` cannot be created using SACSS, but `font-weight:400;` ok.
 
-## 项目示例
+## Project examples
 
-- A 项目设计规范：所有间距，字号都必须是 4 的倍数，主色为红色；
-- B 项目设计规范：所有间距，字号都必须是 5 的倍数，主色为蓝色;
+- A project design specification: all spacing, font size must be a multiple of 4 and the primary color is red.
+- B project design specification: all spacing, font size must be a multiple of 5, and the primary color is blue;
 
 <Tabs
   defaultValue="lessA"
@@ -226,13 +226,13 @@ SACSS 方法只适用于**数字类型**的值使用。
 <TabItem value="lessA">
 
 ```less
-/* 所有间距，字号都必须是 4 的倍数； */
+/* All spacing, font size must be a multiple of 4; */
 @import 'sacss/less/SACSS';
 
-// 所有的 ClassName 都会添加这个前缀(但不推荐添加前缀)
+// This prefix is added to all ClassName (but not recommended)
 @prefix: '';
 
-// 单位换算表达式
+// Unit conversion expressions
 @unit: 1px;
 
 // margin
@@ -255,20 +255,20 @@ SACSS 方法只适用于**数字类型**的值使用。
 .c_primary{ color: red; }
 .bc_primary{ background-color: red; }
 
-/* 其它自定义代码  */
+/* Other custom codes  */
 ```
 
 </TabItem>
 <TabItem value="sassA">
 
 ```css
-/* 所有间距，字号都必须是 4 的倍数； */
+/* All spacing, font size must be a multiple of 4; */
 @import 'sacss/sass/SACSS';
 
-// 所有的 ClassName 都会添加这个前缀(但不推荐添加前缀)
+// This prefix is added to all ClassName (but not recommended)
 $prefix: '';
 
-// 单位换算表达式
+// Unit conversion expressions
 $unit: 1px;
 
 // margin
@@ -291,7 +291,7 @@ $unit: 1px;
 .c_primary{ color: red; }
 .bc_primary{ background-color: red; }
 
-/* 其它自定义代码  */
+/* Other custom codes  */
 ```
 
 </TabItem>
@@ -299,13 +299,13 @@ $unit: 1px;
 <TabItem value="lessB">
 
 ```less
-/* 所有间距，字号都必须是 5 的倍数； */
+/* All spacing, font size must be in multiples of 5; */
 @import 'sacss/less/SACSS.less';
 
-// 所有的 ClassName 都会添加这个前缀(但不推荐添加前缀)
+// This prefix is added to all ClassName (but prefixing is not recommended)
 @prefix: '';
 
-// 单位换算表达式
+// Unit conversion expressions
 @unit: 1px;
 
 // margin
@@ -328,20 +328,20 @@ $unit: 1px;
 .c_primary{ color: blue; }
 .bc_primary{ background-color: blue; }
 
-/* 其它自定义代码  */
+/* Other custom codes  */
 ```
 
 </TabItem>
 <TabItem value="sassB">
 
 ```css
-/* 所有间距，字号都必须是 5 的倍数； */
+/* All spacing, font size must be in multiples of 5; */
 @import 'sacss/sass/SACSS.scss';
 
-// 所有的 ClassName 都会添加这个前缀(但不推荐添加前缀)
+// This prefix is added to all ClassName (but prefixing is not recommended)
 $prefix: '';
 
-// 单位换算表达式
+// Unit conversion expressions
 $unit: 1px;
 
 // margin
@@ -364,21 +364,21 @@ $unit: 1px;
 .c_primary{ color: blue; }
 .bc_primary{ background-color: blue; }
 
-/* 其它自定义代码  */
+/* Other custom codes  */
 ```
 
 </TabItem>
 </Tabs>
 
-## 哪些需要定制
+## What to customize
 
-- `margin`: 缩写 `m`
-- `padding`: 缩写 `p`
-- `font-size`: 缩写 `fs`
-- `line-height`: 缩写 `lh`
-- `color`: 缩写 `c_`
-- `background-color`: 缩写 `bc_`
-- 以及你和设计师沟通下来的 Token(你和设计师之间的约定)
+- `margin`: abbreviation `m`
+- `padding`: abbreviation `p`
+- `font-size`: abbreviation `fs`
+- `line-height`: abbreviation `lh`
+- `color`: abbreviation `c_`
+- `background-color`: abbreviation `bc_`
+- The Token you communicate with the designer (the agreement between you and the designer)
 
 
 

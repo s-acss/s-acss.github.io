@@ -13,7 +13,7 @@ export default function Home() {
     <Layout
       description={
         translate({
-          message: '描述',
+          message: 'Create Utility First CSS library for your project faster and easier.',
           description: '在 meta 标签中的描述'
         })
       }

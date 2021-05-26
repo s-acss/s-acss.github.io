@@ -1,0 +1,48 @@
+# Naming Rules
+
+> **Naming rules** are the most **core** element of SACSS.
+
+|rules|examples|
+|:----|----:|
+|1. Take only the first letter|`.db{ display:block; }`|
+|2. Have numbers directly concatenated|`.mb10{ margin-bottom:10px; }`|
+|3. negative values directly `-` connected|`.mb-10{ margin-bottom:-10px; }`|
+|4. Special symbols directly escaped with `\`| `.w100\%{ width:100%; } .lh1\.2{ line-height:1.2 }`|
+|5. Other or custom styles, split by `_`| `.c_fff{ color:#fff; } .bc_fff{ background-color: #ffffff; }` |
+|6.hover style, split by `\:h`| `.fs12{ font-size:12px; } .fs12\:h:hover{ font-size:12px; }` |
+
+This set of **naming rules** looks so **simple** or even **minimal**.
+
+But it is the author's greatest **balance** between **development efficiency** and **development experience** that he has found in nearly 10 years of polishing and iterating on different projects.
+
+> Of course you can also modify the rules to suit your own preferences, or project style
+
+## Color naming
+
+```css
+/**
+  * .c_{custome name}{ color: value; }
+  */
+
+/* gray, incremented or decremented by adding x */
+.c_xl { color: #111; }
+.c_l { color: #333; }
+.c_m { color: #666; }
+.c_s { color: #999; }
+.c_xs { color: #ddd; }
+
+/* color */
+.c_primary { color: blue; }
+.c_secondary { color: gray; }
+.c_danger { color: red; }
+.c_warning { color: yellow; }
+.c_success { color: green; }
+.c_info { color: cadetblue; }
+.c_light { color: #f8f9fa; }
+.c_dark { color: #343a40; }
+```
+
+## Naming inspiration
+
+- [Atomic CSS](https://acss.io/): core idea (Yahoo!).
+- [Emmet](https://www.emmet.io/): naming convention inspired by Emmet, many IDEs have this rule built in;
