@@ -5,28 +5,29 @@ This website is built using [Docusaurus 2](https://docusaurus.io/), a modern sta
 ## Installation
 
 ```console
-yarn install
+$ yarn  # 安装依赖
 ```
 
 ## Local Development
 
 ```console
-yarn start
-yarn start -- --locale en
+$ yarn start     # 开始中文
+$ yarn start:en  # 开始英文
 ```
 
 ## Deploy
 
-`sh deploy.sh`
+```console
+$ yarn deploy    # 开始构建
+```
 
 ## Translate 
 
 ```console
-yarn write-translations
-yarn write-translations -- --locale en
+$ yarn write-translations:en  # 翻译中文
 ```
 
 ```console
-mkdir -p i18n/en/docusaurus-plugin-content-docs/current
-cp -r docs/** i18n/en/docusaurus-plugin-content-docs/current
+$ mkdir -p i18n/en/docusaurus-plugin-content-docs/current
+$ cp -r docs/** i18n/en/docusaurus-plugin-content-docs/current
 ```

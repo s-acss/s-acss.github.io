@@ -16,7 +16,10 @@
   --ifm-color-primary-lightest: rgb(146, 224, 208);
   --ifm-code-font-size: 95%;
 }
-
+figure, blockquote, figcaption{
+  margin: 0;
+  padding: 0;
+}
 .docusaurus-highlight-code-line {
   background-color: rgb(72, 77, 91);
   display: block;
@@ -32,9 +35,25 @@ dl, dt, dd, h2, p {
   padding: 0;
   margin: 0;
 }
-
+.pt8 {
+  padding-top: 8px;
+}
 .pt16 {
   padding-top: 16px;
+}
+
+.pr16 {
+  padding-right: 16px;
+}
+.pb8 {
+  padding-bottom: 8px;
+}
+.pb16 {
+  padding-bottom: 16px;
+}
+
+.pl16 {
+  padding-left: 16px;
 }
 
 .pt24 {
@@ -53,21 +72,11 @@ dl, dt, dd, h2, p {
   padding-right: 24px;
 }
 
-.pr16 {
-  padding-right: 16px;
-}
-
-.pb16 {
-  padding-bottom: 16px;
-}
 
 .pt32 {
   padding-top: 32px;
 }
 
-.pl16 {
-  padding-left: 16px;
-}
 
 .mr8 {
   margin-right: 8px;
@@ -96,9 +105,11 @@ dl, dt, dd, h2, p {
 .fs16 {
   font-size: 16px;
 }
-.fs40{
+
+.fs40 {
   font-size: 40px;
 }
+
 .w48 {
   width: 48px;
 }
@@ -123,6 +134,38 @@ dl, dt, dd, h2, p {
   color: #0891b2;
 }
 
-.mw480{
+.mw300 {
+  max-width: 300px;
+}
+
+.mw480 {
   max-width: 480px;
+}
+
+.clearfix:after {
+  display: table;
+  content: '';
+  clear: both
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+
+.cell {
+  display: table-cell;
+  width: 2000px
+}
+
+.ellipsis-mul {
+  display: -webkit-box;
+  overflow: hidden;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical
+}
+
+.ellipsis-mul._2 {
+  -webkit-line-clamp: 2
 }
