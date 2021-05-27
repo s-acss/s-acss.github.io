@@ -33,8 +33,15 @@ module.exports = {
         {
           type: 'doc',
           docId: 'intro.about',
-          position: 'left',
-          label: 'Docs',
+          label: '📄 Docs',
+        },
+        {
+          href: 'https://www.npmjs.com/package/sacss',
+          label: '⬇️ NPM',
+        },
+        {
+          href: 'https://github.com/s-acss/sacss',
+          label: '🐱 GitHub',
         },
         // {
         //   to: '/blog',
@@ -43,16 +50,6 @@ module.exports = {
         // },
         {
           type: 'localeDropdown',
-          position: 'right',
-        },
-        {
-          href: 'https://www.npmjs.com/package/sacss',
-          label: 'NPM',
-          position: 'right',
-        },
-        {
-          href: 'https://github.com/s-acss/sacss',
-          label: 'GitHub',
           position: 'right',
         },
       ],
