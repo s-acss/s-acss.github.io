@@ -43,6 +43,11 @@ module.exports = {
           href: 'https://github.com/s-acss/sacss',
           label: '🐱 GitHub',
         },
+        {
+          href: 'https://github.com/s-acss/sacss/discussions',
+          label: '🧲 Discussions',
+          position: 'right',
+        },
         // {
         //   to: '/blog',
         //   label: 'Blog',
