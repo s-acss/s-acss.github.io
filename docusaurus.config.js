@@ -22,7 +22,8 @@ module.exports = {
     },
   },
   themeConfig: {
-    googleAnalytics: {
+    gtag: {
+      // You can also use your "G-" Measurement ID here.
       trackingID: '273961106',
       // Optional fields.
       anonymizeIP: true, // Should IPs be anonymized?
