@@ -22,6 +22,11 @@ module.exports = {
     },
   },
   themeConfig: {
+    googleAnalytics: {
+      trackingID: '273961106',
+      // Optional fields.
+      anonymizeIP: true, // Should IPs be anonymized?
+    },
     sidebarCollapsible: false,
     navbar: {
       title: 'SACSS',
@@ -82,6 +87,12 @@ module.exports = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        // 以下参数将被直接传递给 @docusaurus/plugin-content-sitemap （设置为 false 则表示禁用此插件）
+        sitemap:  {
+          changefreq: 'weekly',
+          priority: 0.5,
+          trailingSlash: false,
+        }
       },
     ],
   ],
