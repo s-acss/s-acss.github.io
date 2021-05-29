@@ -22,6 +22,12 @@ module.exports = {
     },
   },
   themeConfig: {
+    gtag: {
+      // You can also use your "G-" Measurement ID here.
+      trackingID: 'G-E818CNKJJB',
+      // Optional fields.
+      anonymizeIP: true, // Should IPs be anonymized?
+    },
     sidebarCollapsible: false,
     navbar: {
       title: 'SACSS',
@@ -87,12 +93,6 @@ module.exports = {
           changefreq: 'weekly',
           priority: 0.5,
           trailingSlash: false,
-        },
-        gtag: {
-          // You can also use your "G-" Measurement ID here.
-          trackingID: 'G-E818CNKJJB',
-          // Optional fields.
-          anonymizeIP: true, // Should IPs be anonymized?
         },
       },
     ],
