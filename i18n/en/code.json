@@ -19,17 +19,9 @@
     "message": "Atomic CSS",
     "description": "Atomic CSS"
   },
-  "只需要专注在 HTML 就可以开发大部分网页样式": {
-    "message": "Rapidly build modern websites without ever leaving your HTML",
-    "description": "Rapidly build modern websites without ever leaving your HTML."
-  },
   "简单": {
     "message": "Easy",
     "description": "Easy"
-  },
-  "我们没有发明庞大且让人迷惑的 class 名字，只有屈指可数的命名规则": {
-    "message": "Instead of inventing huge and confusing class names, we have only a handful of naming rules",
-    "description": "feature"
   },
   "无依赖": {
     "message": "Framework-agnostic",
@@ -218,5 +210,21 @@
   "theme.common.skipToMainContent": {
     "message": "Skip to main content",
     "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
+  },
+  "只需要专注在 HTML 就可以开发大部分网页样式，就像 Tailwind CSS": {
+    "message": "Rapidly build modern websites without ever leaving your HTML as Tailwind CSS",
+    "description": "Rapidly build modern websites without ever leaving your HTML."
+  },
+  "我们没有发明庞大且让人迷惑的 Class 名字，只有屈指可数的命名规则": {
+    "message": "Instead of inventing huge and confusing class names, we have only a handful of naming rules",
+    "description": "feature"
+  },
+  "设计转代码": {
+    "message": "Design To Code",
+    "description": "Design To Code"
+  },
+  "我们还提供了一个 Figma 插件，帮你从设计稿中直接获取 SACSS 代码": {
+    "message": "We also provide a Figma plugin to help you get the SACSS code directly from the design",
+    "description": "feature"
   }
 }
