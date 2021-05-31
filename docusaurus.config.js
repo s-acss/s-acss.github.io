@@ -54,11 +54,11 @@ module.exports = {
           label: '🧲 Discussions',
           position: 'right',
         },
-        // {
-        //   to: '/blog',
-        //   label: 'Blog',
-        //   position: 'right'
-        // },
+        {
+          to: '/blog',
+          label: '📃 Blog',
+          position: 'right'
+        },
         {
           type: 'localeDropdown',
           position: 'right',
