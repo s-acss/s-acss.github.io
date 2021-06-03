@@ -86,7 +86,7 @@ $unit: 1px;   // 单位换算表达式
 @prefix_: '_';
 
 @unit_px: 1px;
-@unit_rem: 1/16*1rem;
+@unit_rem: (1/16*1rem); // 注意 less 中这里需要括号
 
 #SACSS('margin-top'; '@{prefix}mt'; 8, 16, 24; @unit_px);
 #SACSS('margin-right'; '@{prefix}mr'; 8, 16, 14; @unit_px);

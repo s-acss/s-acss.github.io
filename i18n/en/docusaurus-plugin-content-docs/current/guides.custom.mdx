@@ -86,7 +86,7 @@ For naming rules for abbreviations, please [click here](./guides.name).
 @prefix_: '_';
 
 @unit_px: 1px;
-@unit_rem: 1/16*1rem;
+@unit_rem: (1/16*1rem);  // Parentheses are required here in less
 
 #SACSS('margin-top'; '@{prefix}mt'; 8, 16, 24; @unit_px);
 #SACSS('margin-right'; '@{prefix}mr'; 8, 16, 14; @unit_px);
