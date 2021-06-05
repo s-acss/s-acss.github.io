@@ -30,5 +30,9 @@
   "item.label.🧲 Discussions": {
     "message": "🧲 Discussions",
     "description": "Navbar item with label 🧲 Discussions"
+  },
+  "item.label.📃 Blog": {
+    "message": "📃 Blog",
+    "description": "Navbar item with label 📃 Blog"
   }
 }

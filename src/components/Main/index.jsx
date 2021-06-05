@@ -11,7 +11,7 @@ function Main({className}) {
           Create Utility First CSS library for your project faster and easier.
         </Translate>
       </h2>
-      <p className="mb16 fw500">
+      <p className="fw500">
           <Translate
             id="slogan.sub"
             description="slogan subtitle"

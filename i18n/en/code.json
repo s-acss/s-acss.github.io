@@ -4,7 +4,7 @@
     "description": "在 meta 标签中的描述"
   },
   "start.button": {
-    "message": "Get Start",
+    "message": "Import & Start",
     "description": "开始"
   },
   "原生": {
