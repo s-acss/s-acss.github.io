@@ -20,8 +20,8 @@ module.exports = {
     ],
     "Use":[
       'use.core',
-      'use.less.sass',
-      'use.react.vue',
+      'use.preprocessor',
+      'use.frame',
       'use.rn',
       'use.figma',
     ],

@@ -1,6 +1,6 @@
-# LESS / SASS
+# CSS 预处理
 
-SACSS **核心代码** 只有一个 CSS 文件，需要定制的部分我们提供了 SASS 和 LESS 的 Mixin 辅助你快速构建 **Utility First CSS**。
+SACSS **核心代码** 只有一个 CSS 文件，需要定制的部分我们提供了 SASS、 LESS、Stylus 的 Mixin 辅助你快速构建 **Utility First CSS**。
 
 为什么需要自定义？[点我了解](./guides.custom)
 
@@ -20,6 +20,7 @@ import TabItem from '@theme/TabItem';
   values={[
     { label: 'LESS', value: 'less', },
     { label: 'SASS', value: 'sass', },
+    { label: 'Stylus', value: 'stylus', },
     { label: 'Output', value: 'output' }
   ]
   }
@@ -42,24 +43,24 @@ import TabItem from '@theme/TabItem';
 #WidthPrefix(@prefix);
 
 // margin
-#SACSS('margin-top'; '@{prefix}mt'; 8, 16; @unit);
-#SACSS('margin-right'; '@{prefix}mr'; 8, 16; @unit);
-#SACSS('margin-bottom'; '@{prefix}mb'; 8, 16; @unit);
-#SACSS('margin-left'; '@{prefix}ml'; 8, 16; @unit);
+#SACSS(@prefix; 'margin-top'; 'mt'; 8, 16; @unit);
+#SACSS(@prefix; 'margin-right'; 'mr'; 8, 16; @unit);
+#SACSS(@prefix; 'margin-bottom'; 'mb'; 8, 16; @unit);
+#SACSS(@prefix; 'margin-left'; 'ml'; 8, 16; @unit);
 
 // padding
-#SACSS('padding-top'; '@{prefix}pt'; 8, 16; @unit);
-#SACSS('padding-right'; '@{prefix}pr'; 8, 16; @unit);
-#SACSS('padding-bottom'; '@{prefix}pb'; 8, 16; @unit);
-#SACSS('padding-left'; '@{prefix}pl'; 8, 16; @unit);
+#SACSS(@prefix; 'padding-top'; 'pt'; 8, 16; @unit);
+#SACSS(@prefix; 'padding-right'; 'pr'; 8, 16; @unit);
+#SACSS(@prefix; 'padding-bottom'; 'pb'; 8, 16; @unit);
+#SACSS(@prefix; 'padding-left'; 'pl'; 8, 16; @unit);
 
 // font
-#SACSS('font-size'; '@{prefix}fs'; 12, 16; @unit);
-#SACSS('line-height'; '@{prefix}lh'; 16, 24; @unit);
+#SACSS(@prefix; 'font-size'; 'fs'; 12, 16; @unit);
+#SACSS(@prefix; 'line-height'; 'lh'; 16, 24; @unit);
 
 // size
-#SACSS('width'; '@{prefix}w'; 16, 24; @unit);
-#SACSS('height'; '@{prefix}h'; 16, 24; @unit);
+#SACSS(@prefix; 'width'; 'w'; 16, 24; @unit);
+#SACSS(@prefix; 'height'; 'h'; 16, 24; @unit);
 
 // Helpers
 .clearfix{ #Clearfix;  }
@@ -86,24 +87,24 @@ $unit: 1px;
 @include WidthPrefix($prefix);
 
 // margin
-@include SACSS('margin-top', '#{$prefix}mt', (8, 16), $unit);
-@include SACSS('margin-right', '#{$prefix}mr', (8, 16), $unit);
-@include SACSS('margin-bottom', '#{$prefix}mb', (8, 16), $unit);
-@include SACSS('margin-left', '#{$prefix}ml', (8, 16), $unit);
+@include SACSS($prefix; 'margin-top', 'mt', (8, 16), $unit);
+@include SACSS($prefix; 'margin-right', 'mr', (8, 16), $unit);
+@include SACSS($prefix; 'margin-bottom', 'mb', (8, 16), $unit);
+@include SACSS($prefix; 'margin-left', 'ml', (8, 16), $unit);
 
 // padding
-@include SACSS('padding-top', '#{$prefix}mt', (8, 16), $unit);
-@include SACSS('padding-right', '#{$prefix}mr', (8, 16), $unit);
-@include SACSS('padding-bottom', '#{$prefix}mb', (8, 16), $unit);
-@include SACSS('padding-left', '#{$prefix}ml', (8, 16), $unit);
+@include SACSS($prefix; 'padding-top', 'mt', (8, 16), $unit);
+@include SACSS($prefix; 'padding-right', 'mr', (8, 16), $unit);
+@include SACSS($prefix; 'padding-bottom', 'mb', (8, 16), $unit);
+@include SACSS($prefix; 'padding-left', 'ml', (8, 16), $unit);
 
 // font
-@include SACSS('font-size', '#{$prefix}fs', (12, 16), $unit);
-@include SACSS('line-height', '#{$prefix}lh', (16, 24), $unit);
+@include SACSS($prefix; 'font-size', 'fs', (12, 16), $unit);
+@include SACSS($prefix; 'line-height', 'lh', (16, 24), $unit);
 
 // size
-@include SACSS('width', '#{$prefix}w', (16, 24), $unit);
-@include SACSS('height', '#{$prefix}h', (16, 24), $unit);
+@include SACSS($prefix; 'width', 'w', (16, 24), $unit);
+@include SACSS($prefix; 'height', 'h', (16, 24), $unit);
 
 // Helpers
 .clearfix{ @include Clearfix;  }
@@ -111,6 +112,56 @@ $unit: 1px;
 .cell{ @include Cell; }
 .ellipsis-mul{ @include Ellipsis-multiple;  }
 .ellipsis-mul._2{ -webkit-line-clamp: 2; }
+```
+
+</TabItem>
+<TabItem value="stylus">
+
+```css
+@import '~sacss/stylus/WidthPrefix';
+@import '~sacss/stylus/SACSS';
+@import "~sacss/stylus/Helpers";
+
+// 所有的 ClassName 都会添加这个前缀(但不推荐添加前缀)
+$prefix = ''
+
+// 单位换算表达式
+$unit = 1px
+
+// 为核心文件添加前缀
+WidthPrefix($prefix)
+
+// margin
+SACSS($prefix, 'margin-top', 'mt', 8 16, $unit)
+SACSS($prefix, 'margin-right', 'mr', 8 16, $unit)
+SACSS($prefix, 'margin-bottom', 'mb', 8 16, $unit)
+SACSS($prefix, 'margin-left', 'ml', 8 16, $unit)
+
+// padding
+SACSS($prefix, 'padding-top', 'mt', 8 16, $unit)
+SACSS($prefix, 'padding-right', 'mr', 8 16, $unit)
+SACSS($prefix, 'padding-bottom', 'mb', 8 16, $unit)
+SACSS($prefix, 'padding-left', 'ml', 8 16, $unit)
+
+// font
+SACSS($prefix, 'font-size', 'fs', 12 16, $unit)
+SACSS($prefix, 'line-height', 'lh', 16 24, $unit)
+
+// size
+SACSS($prefix, 'width', 'w', 16 24, $unit)
+SACSS($prefix, 'height', 'h', 16 24, $unit)
+
+// Helpers
+.clearfix
+  Clearfix()
+.ellipsis
+  Ellipsis()
+.cell
+  Cell()
+.ellipsis-mul
+  Ellipsis-multiple()
+.ellipsis-mul._2
+  -webkit-line-clamp: 2
 ```
 
 </TabItem>

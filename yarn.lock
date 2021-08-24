@@ -1356,13 +1356,6 @@
   dependencies:
     "@docusaurus/core" "2.0.0-beta.0"
 
-"@docusaurus/plugin-google-analytics@^2.0.0-beta.0":
-  version "2.0.0-beta.0"
-  resolved "https://registry.npmjs.org/@docusaurus/plugin-google-analytics/-/plugin-google-analytics-2.0.0-beta.0.tgz#ee287fb991202d8e9b792129dcc5542ef3ccd6c9"
-  integrity sha512-7lHrg1L+adc8VbiaLexa15i4fdq4MRPUTLMxRPAWz+QskhisW89Ryi2/gDmfMNqLblX84Qg2RASa+2gqO4wepw==
-  dependencies:
-    "@docusaurus/core" "2.0.0-beta.0"
-
 "@docusaurus/plugin-google-gtag@2.0.0-beta.0":
   version "2.0.0-beta.0"
   resolved "https://registry.nlark.com/@docusaurus/plugin-google-gtag/download/@docusaurus/plugin-google-gtag-2.0.0-beta.0.tgz#4836770130cf54ff2cd83affbff9644ee7293e9e"
